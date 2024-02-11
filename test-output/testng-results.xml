@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-11T21:22:31 IST" name="Default suite" finished-at="2024-02-11T21:22:43 IST" duration-ms="12436">
+    <groups>
+    </groups>
+    <test started-at="2024-02-11T21:22:31 IST" name="Default test" finished-at="2024-02-11T21:22:43 IST" duration-ms="12436">
+      <class name="com.learnertracker.test.TrainerManageLearnerClass">
+        <test-method is-config="true" signature="excelSetup()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:30 IST" name="excelSetup" finished-at="2024-02-11T21:22:31 IST" duration-ms="454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- excelSetup -->
+        <test-method is-config="true" signature="firstSetup()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:31 IST" name="firstSetup" finished-at="2024-02-11T21:22:36 IST" duration-ms="5624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstSetup -->
+        <test-method is-config="true" signature="trainerLogin()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:36 IST" name="trainerLogin" finished-at="2024-02-11T21:22:37 IST" depends-on-methods="com.learnertracker.test.TestBase.firstSetup" duration-ms="170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trainerLogin -->
+        <test-method signature="deleteLearner()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:37 IST" name="deleteLearner" finished-at="2024-02-11T21:22:40 IST" duration-ms="3067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLearner -->
+        <test-method signature="editLearner()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:40 IST" name="editLearner" finished-at="2024-02-11T21:22:43 IST" duration-ms="3435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLearner -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:43 IST" name="logout" finished-at="2024-02-11T21:22:43 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.learnertracker.test.TrainerManageLearnerClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
