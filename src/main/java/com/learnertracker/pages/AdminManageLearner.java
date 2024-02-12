@@ -1,5 +1,7 @@
 package com.learnertracker.pages;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -118,6 +120,35 @@ public class AdminManageLearner {
 		WebElement blankCourseStatusWarningMsgEl = driver
 				.findElement(By.xpath("//select[@name='cstatus']/following-sibling::p"));
 		return blankCourseStatusWarningMsgEl.getText();
+	}
+
+	public void clickFileUploadBtn() {
+		WebElement fileUploadBtn = driver.findElement(By.xpath("//a[@href='/upload']"));
+		fileUploadBtn.click();
+	}
+
+	public void chooseCsvFile() {
+		WebElement chooseFileBtn = driver.findElement(By.xpath("//input[@type='file']"));
+		File csvFile = new File("src/main/resources/learners-list-test-data.csv");
+		chooseFileBtn.sendKeys(csvFile.getAbsolutePath());
+	}
+
+	public void submitCsvUpload() {
+		WebElement submitCsvBtn = driver.findElement(By.xpath("//button[@type='submit']"));
+		submitCsvBtn.click();
+	}
+
+	public void clickReturnToDashboardBtn() {
+		WebElement returnToDashboardBtn = driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']"));
+		returnToDashboardBtn.click();
+	}
+
+	public String getCsvUploadSuccessMessage() {
+		try {
+			return driver.findElement(By.id("swal2-title")).getText();
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }

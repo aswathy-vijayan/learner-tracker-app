@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class AdminUsers {
+public class AdminAddUsers {
 	WebDriver driver;
 
-	public AdminUsers(WebDriver d) {
+	public AdminAddUsers(WebDriver d) {
 		this.driver = d;
 	}
 

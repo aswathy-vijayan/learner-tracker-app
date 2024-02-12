@@ -30,10 +30,11 @@ public class AdminAddLearnerClass extends TestBase {
 	public void LearnerForm() {
 		adminpage = new AdminManageLearner(driver);
 		adminpage.clickLearner();
-		adminpage.addLearner();
 	}
 
 	public void runLearnerCreate(int row) throws InterruptedException {
+		adminpage.addLearner();
+
 		String learnerId = ExcelUtility.getCellData(row, 0);
 		String name = ExcelUtility.getCellData(row, 1);
 		String course = ExcelUtility.getCellData(row, 2);
@@ -129,6 +130,18 @@ public class AdminAddLearnerClass extends TestBase {
 		String acutalBlankCourseStatusFieldWarningMsg = adminpage.blankCourseStatusfieldWarningMsg();
 		adminpage.backToDashboard();
 		Assert.assertEquals(acutalBlankCourseStatusFieldWarningMsg, AutomationConstants.BlankCourseStatusFieldMessage);
+	}
+
+	@Test
+	public void trainerAddLearnersViaCsv() {
+		// Test admin user can add learners via CSV file
+		adminpage.clickFileUploadBtn();
+		adminpage.chooseCsvFile();
+		adminpage.submitCsvUpload();
+		String successMsg = adminpage.getCsvUploadSuccessMessage();
+		adminpage.clickReturnToDashboardBtn();
+		adminpage.clickOkBtn();
+		Assert.assertEquals(successMsg, AutomationConstants.AddBulkLearnerSuccessMessage);
 	}
 
 }

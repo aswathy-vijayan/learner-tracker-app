@@ -50,7 +50,8 @@ public class TrainerAddLearnerClass extends TestBase {
 	}
 
 	@Test
-	public void trainerAddLearnerViaCsv() {
+	public void trainerAddLearnersViaCsv() {
+		// Test trainer user can add learners via CSV file
 		trainerManageLearner = new TrainerManageLearner(driver);
 		trainerManageLearner.clickFileUploadBtn();
 		trainerManageLearner.chooseCsvFile();

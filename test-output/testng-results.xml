@@ -1,37 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-11T21:22:31 IST" name="Default suite" finished-at="2024-02-11T21:22:43 IST" duration-ms="12436">
+  <suite started-at="2024-02-12T23:22:34 IST" name="Default suite" finished-at="2024-02-12T23:22:57 IST" duration-ms="22587">
     <groups>
     </groups>
-    <test started-at="2024-02-11T21:22:31 IST" name="Default test" finished-at="2024-02-11T21:22:43 IST" duration-ms="12436">
-      <class name="com.learnertracker.test.TrainerManageLearnerClass">
-        <test-method is-config="true" signature="excelSetup()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:30 IST" name="excelSetup" finished-at="2024-02-11T21:22:31 IST" duration-ms="454" status="PASS">
+    <test started-at="2024-02-12T23:22:34 IST" name="Default test" finished-at="2024-02-12T23:22:57 IST" duration-ms="22587">
+      <class name="com.learnertracker.test.AdminAddUserClass">
+        <test-method is-config="true" signature="excelSetup()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:34 IST" name="excelSetup" finished-at="2024-02-12T23:22:34 IST" duration-ms="448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- excelSetup -->
-        <test-method is-config="true" signature="firstSetup()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:31 IST" name="firstSetup" finished-at="2024-02-11T21:22:36 IST" duration-ms="5624" status="PASS">
+        <test-method is-config="true" signature="firstSetup()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:34 IST" name="firstSetup" finished-at="2024-02-12T23:22:37 IST" duration-ms="3339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstSetup -->
-        <test-method is-config="true" signature="trainerLogin()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:36 IST" name="trainerLogin" finished-at="2024-02-11T21:22:37 IST" depends-on-methods="com.learnertracker.test.TestBase.firstSetup" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="secondAdminLogin()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:37 IST" name="secondAdminLogin" finished-at="2024-02-12T23:22:38 IST" depends-on-methods="com.learnertracker.test.TestBase.firstSetup" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- trainerLogin -->
-        <test-method signature="deleteLearner()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:37 IST" name="deleteLearner" finished-at="2024-02-11T21:22:40 IST" duration-ms="3067" status="PASS">
+        </test-method> <!-- secondAdminLogin -->
+        <test-method is-config="true" signature="addUserForm()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:38 IST" name="addUserForm" finished-at="2024-02-12T23:22:38 IST" duration-ms="522" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteLearner -->
-        <test-method signature="editLearner()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:40 IST" name="editLearner" finished-at="2024-02-11T21:22:43 IST" duration-ms="3435" status="PASS">
+        </test-method> <!-- addUserForm -->
+        <test-method signature="addUserWithInvalidEmail()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:38 IST" name="addUserWithInvalidEmail" finished-at="2024-02-12T23:22:50 IST" duration-ms="11427" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Must be a valid Email ID] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Must be a valid Email ID] but found [null]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.learnertracker.test.AdminAddUserClass.addUserWithInvalidEmail(AdminAddUserClass.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editLearner -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.learnertracker.test.TrainerManageLearnerClass@477b4cdf]" started-at="2024-02-11T21:22:43 IST" name="logout" finished-at="2024-02-11T21:22:43 IST" duration-ms="115" status="PASS">
+        </test-method> <!-- addUserWithInvalidEmail -->
+        <test-method is-config="true" signature="addUserForm()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:50 IST" name="addUserForm" finished-at="2024-02-12T23:22:50 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserForm -->
+        <test-method signature="addUserWithInvalidName()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:50 IST" name="addUserWithInvalidName" finished-at="2024-02-12T23:22:52 IST" duration-ms="1881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserWithInvalidName -->
+        <test-method is-config="true" signature="addUserForm()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:52 IST" name="addUserForm" finished-at="2024-02-12T23:22:52 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserForm -->
+        <test-method signature="addUserWithInvalidUsername()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:52 IST" name="addUserWithInvalidUsername" finished-at="2024-02-12T23:22:53 IST" duration-ms="1643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserWithInvalidUsername -->
+        <test-method is-config="true" signature="addUserForm()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:53 IST" name="addUserForm" finished-at="2024-02-12T23:22:53 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserForm -->
+        <test-method signature="addUserWithValidCredentials()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:53 IST" name="addUserWithValidCredentials" finished-at="2024-02-12T23:22:55 IST" duration-ms="1334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserWithValidCredentials -->
+        <test-method is-config="true" signature="addUserForm()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:55 IST" name="addUserForm" finished-at="2024-02-12T23:22:55 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserForm -->
+        <test-method signature="addUsersWithInvalidPassword()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:55 IST" name="addUsersWithInvalidPassword" finished-at="2024-02-12T23:22:57 IST" duration-ms="1622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUsersWithInvalidPassword -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.learnertracker.test.AdminAddUserClass@6f03482]" started-at="2024-02-12T23:22:57 IST" name="logout" finished-at="2024-02-12T23:22:57 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-      </class> <!-- com.learnertracker.test.TrainerManageLearnerClass -->
+      </class> <!-- com.learnertracker.test.AdminAddUserClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

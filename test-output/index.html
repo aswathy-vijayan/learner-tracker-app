@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1163141565\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse--848891918\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.AdminAddUserClass" class="method navigator-link" hash-for-method="addUserWithInvalidEmail">addUserWithInvalidEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.TrainerManageLearnerClass" class="method navigator-link" hash-for-method="deleteLearner">deleteLearner</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.AdminAddUserClass" class="method navigator-link" hash-for-method="addUserWithInvalidName">addUserWithInvalidName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.TrainerManageLearnerClass" class="method navigator-link" hash-for-method="editLearner">editLearner</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.AdminAddUserClass" class="method navigator-link" hash-for-method="addUserWithInvalidUsername">addUserWithInvalidUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.AdminAddUserClass" class="method navigator-link" hash-for-method="addUserWithValidCredentials">addUserWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.learnertracker.test.AdminAddUserClass" class="method navigator-link" hash-for-method="addUsersWithInvalidPassword">addUsersWithInvalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -123,24 +147,91 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.learnertracker.test.TrainerManageLearnerClass</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.learnertracker.test.AdminAddUserClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteLearner">
-                  </a> <!-- deleteLearner -->
-                  <span class="method-name">deleteLearner</span>
+                  <a name="addUserWithInvalidEmail">
+                  </a> <!-- addUserWithInvalidEmail -->
+                  <span class="method-name">addUserWithInvalidEmail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Must be a valid Email ID] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.learnertracker.test.AdminAddUserClass.addUserWithInvalidEmail(AdminAddUserClass.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.learnertracker.test.AdminAddUserClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUserWithInvalidName">
+                  </a> <!-- addUserWithInvalidName -->
+                  <span class="method-name">addUserWithInvalidName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="editLearner">
-                  </a> <!-- editLearner -->
-                  <span class="method-name">editLearner</span>
+                  <a name="addUserWithInvalidUsername">
+                  </a> <!-- addUserWithInvalidUsername -->
+                  <span class="method-name">addUserWithInvalidUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUserWithValidCredentials">
+                  </a> <!-- addUserWithValidCredentials -->
+                  <span class="method-name">addUserWithValidCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUsersWithInvalidPassword">
+                  </a> <!-- addUsersWithInvalidPassword -->
+                  <span class="method-name">addUsersWithInvalidPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +239,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1163141565\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse--848891918\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -157,7 +248,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.learnertracker.test.TrainerManageLearnerClass&quot;/&gt;
+      &lt;class name=&quot;com.learnertracker.test.AdminAddUserClass&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -197,20 +288,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editLearner')
-data.setCell(0, 2, 'com.learnertracker.test.TrainerManageLearnerClass')
-data.setCell(0, 3, 3435);
+data.setCell(0, 1, 'addUserWithInvalidEmail')
+data.setCell(0, 2, 'com.learnertracker.test.AdminAddUserClass')
+data.setCell(0, 3, 11427);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteLearner')
-data.setCell(1, 2, 'com.learnertracker.test.TrainerManageLearnerClass')
-data.setCell(1, 3, 3067);
+data.setCell(1, 1, 'addUserWithInvalidName')
+data.setCell(1, 2, 'com.learnertracker.test.AdminAddUserClass')
+data.setCell(1, 3, 1881);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addUserWithInvalidUsername')
+data.setCell(2, 2, 'com.learnertracker.test.AdminAddUserClass')
+data.setCell(2, 3, 1643);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addUsersWithInvalidPassword')
+data.setCell(3, 2, 'com.learnertracker.test.AdminAddUserClass')
+data.setCell(3, 3, 1622);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'addUserWithValidCredentials')
+data.setCell(4, 2, 'com.learnertracker.test.AdminAddUserClass')
+data.setCell(4, 3, 1334);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -236,30 +339,64 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.learnertracker.test.TrainerManageLearnerClass</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.learnertracker.test.AdminAddUserClass</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">excelSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">firstSetup</span>
-                <span class="method-start">459 ms</span>
+                <span class="method-start">453 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
-                <span class="method-name">trainerLogin</span>
-                <span class="method-start">6084 ms</span>
+                <span class="method-name">secondAdminLogin</span>
+                <span class="method-start">3792 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">addUserForm</span>
+                <span class="method-start">3985 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">deleteLearner</span>
-                <span class="method-start">6269 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addUserWithInvalidEmail</span>
+                <span class="method-start">4508 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">addUserForm</span>
+                <span class="method-start">15941 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">editLearner</span>
-                <span class="method-start">9341 ms</span>
+                <span class="method-name">addUserWithInvalidName</span>
+                <span class="method-start">16155 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">addUserForm</span>
+                <span class="method-start">18038 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUserWithInvalidUsername</span>
+                <span class="method-start">18094 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">addUserForm</span>
+                <span class="method-start">19739 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUserWithValidCredentials</span>
+                <span class="method-start">19790 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">addUserForm</span>
+                <span class="method-start">21126 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUsersWithInvalidPassword</span>
+                <span class="method-start">21321 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">logout</span>
-                <span class="method-start">12776 ms</span>
+                <span class="method-start">22947 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

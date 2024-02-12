@@ -8,14 +8,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.learnertracker.constants.AutomationConstants;
-import com.learnertracker.pages.AdminUsers;
+import com.learnertracker.pages.AdminAddUsers;
 import com.learnertracker.pages.LoginPage;
 import com.learnertracker.utilities.ExcelUtility;
 
-public class AdminUserAddTestClass extends TestBase {
+public class AdminAddUserClass extends TestBase {
 	// Test Admin user can add user
 
-	AdminUsers adminPage = null;
+	AdminAddUsers adminPage = null;
 	LoginPage loginPage = null;
 
 	@BeforeTest
@@ -31,7 +31,7 @@ public class AdminUserAddTestClass extends TestBase {
 	@BeforeMethod
 	public void addUserForm() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		adminPage = new AdminUsers(driver);
+		adminPage = new AdminAddUsers(driver);
 		adminPage.clickAddUsers();
 	}
 
