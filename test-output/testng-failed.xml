@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.learnertracker.test.AdminAddUserClass">
+      <class name="com.learnertracker.test.AdminAddLearnerClass">
         <methods>
+          <include name="LearnerForm"/>
           <include name="firstSetup"/>
           <include name="secondAdminLogin"/>
-          <include name="addUserWithInvalidEmail"/>
-          <include name="addUserForm"/>
-          <include name="logout"/>
           <include name="excelSetup"/>
+          <include name="logout"/>
+          <include name="addLearnersWithValidData"/>
         </methods>
-      </class> <!-- com.learnertracker.test.AdminAddUserClass -->
+      </class> <!-- com.learnertracker.test.AdminAddLearnerClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

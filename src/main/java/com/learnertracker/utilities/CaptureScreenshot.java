@@ -23,7 +23,7 @@ public class CaptureScreenshot {
 			File source = screenshot.getScreenshotAs(OutputType.FILE);
 
 			// Define the destination path for the screenshot
-			String destination = "./screenshots/" + testName + ".png";
+			String destination = "src/test/resources/screenshots/" + testName + ".png";
 
 			// Copy the screenshot to the destination path
 			FileUtils.copyFile(source, new File(destination));

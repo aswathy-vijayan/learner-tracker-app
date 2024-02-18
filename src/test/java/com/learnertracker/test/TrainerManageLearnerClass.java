@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.learnertracker.pages.LoginPage;
 import com.learnertracker.pages.TrainerManageLearner;
+import com.learnertracker.utilities.CustomLogger;
 import com.learnertracker.utilities.ExcelUtility;
 
 public class TrainerManageLearnerClass extends TestBase {
@@ -12,9 +13,11 @@ public class TrainerManageLearnerClass extends TestBase {
 
 	LoginPage loginPage = null;
 	TrainerManageLearner trainerManagelearner = null;
+	CustomLogger logger = new CustomLogger(AdminAddLearnerClass.class.getName());
 
 	@BeforeTest
 	public void trainerLogin() {
+		logger.logInfo("Logging in with trainer user credentials");
 		String username = ExcelUtility.getCellData(7, 0);
 		String password = ExcelUtility.getCellData(7, 1);
 
@@ -22,10 +25,13 @@ public class TrainerManageLearnerClass extends TestBase {
 		loginPage.setUsername(username);
 		loginPage.setPassword(password);
 		loginPage.clickLogin();
+		logger.logInfo("Logged in to trainer account");
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void editLearner() throws InterruptedException {
+		// Test Trainer can edit learner
+		logger.logInfo("Start testing trainer can edit learner");
 		Thread.sleep(3000);
 		trainerManagelearner = new TrainerManageLearner(driver);
 		trainerManagelearner.clickEditButton();
@@ -36,7 +42,7 @@ public class TrainerManageLearnerClass extends TestBase {
 		String newProject = ExcelUtility.getCellData(36, 3);
 		String newBatch = ExcelUtility.getCellData(36, 4);
 		String newCourseStatus = ExcelUtility.getCellData(36, 5);
-
+		logger.logInfo("Collected form data from excel sheet");
 		trainerManagelearner.enterLearnerId(newLearnerId);
 		trainerManagelearner.enterName(newName);
 		trainerManagelearner.setCourse(newCourse);
@@ -45,13 +51,17 @@ public class TrainerManageLearnerClass extends TestBase {
 		trainerManagelearner.setCourseStatus(newCourseStatus);
 
 		trainerManagelearner.clickSubmitBtn();
+		logger.logInfo("Submitted learner edit form");
 
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void deleteLearner() throws InterruptedException {
+		// Test Trainer can delete learner
+		logger.logInfo("Test Trainer can delete learner");
 		Thread.sleep(3000);
 		trainerManagelearner = new TrainerManageLearner(driver);
 		trainerManagelearner.clickDeleteButton();
+		logger.logInfo("Deleted learner");
 	}
 }
