@@ -15,7 +15,7 @@ public class LoginTestClass extends TestBase {
 	// Test users can login
 
 	LoginPage obj = null;
-	CustomLogger logger = new CustomLogger(AdminAddLearnerClass.class.getName());
+	CustomLogger logger = new CustomLogger(LoginTestClass.class.getName());
 
 	@BeforeMethod
 	public void refresh() {

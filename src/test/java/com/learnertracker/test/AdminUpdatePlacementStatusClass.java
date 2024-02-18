@@ -12,7 +12,7 @@ public class AdminUpdatePlacementStatusClass extends TestBase {
 
 	LoginPage loginPage = null;
 	AdminPlacementStatus adminPlacementPage = null;
-	CustomLogger logger = new CustomLogger(AdminAddLearnerClass.class.getName());
+	CustomLogger logger = new CustomLogger(AdminUpdatePlacementStatusClass.class.getName());
 
 	@Test(priority = 1)
 	public void adminPlacementStatusUpdate() {

@@ -13,7 +13,7 @@ public class AdminManageLearnerClass extends TestBase {
 
 	LoginPage loginPage = null;
 	AdminManageLearner adminpage = null;
-	CustomLogger logger = new CustomLogger(AdminAddLearnerClass.class.getName());
+	CustomLogger logger = new CustomLogger(AdminManageLearnerClass.class.getName());
 
 	@BeforeTest
 	public void secondAdminLogin() {

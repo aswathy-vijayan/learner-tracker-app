@@ -89,9 +89,10 @@ public class AdminAddUserClass extends TestBase {
 		String invalidEmailActualMsg = adminPage.invalidEmailWarningMsg();
 		logger.logInfo("Got message: " + invalidEmailActualMsg);
 		screenshot.captureScreenshot("addUserWithInvalidEmail");
+		logger.logWarning("Screenshot taken");
 		adminPage.clickOkBtn();
 		Assert.assertEquals(invalidEmailActualMsg, AutomationConstants.InvalidEmailWarningMessage);
-		logger.logInfo("Completed testing addUserWithInvalidEmail");
+		logger.logError("Failed test addUserWithInvalidEmail");
 	}
 
 	@Test(priority = 4)

@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-18T20:17:07 IST" name="Default suite" finished-at="2024-02-18T20:17:15 IST" duration-ms="7473">
+  <suite started-at="2024-02-18T21:42:20 IST" name="Default suite" finished-at="2024-02-18T21:42:34 IST" duration-ms="13691">
     <groups>
     </groups>
-    <test started-at="2024-02-18T20:17:07 IST" name="Default test" finished-at="2024-02-18T20:17:15 IST" duration-ms="7473">
+    <test started-at="2024-02-18T21:42:20 IST" name="Default test" finished-at="2024-02-18T21:42:34 IST" duration-ms="13691">
       <class name="com.learnertracker.test.AdminAddLearnerClass">
-        <test-method is-config="true" signature="excelSetup()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:07 IST" name="excelSetup" finished-at="2024-02-18T20:17:07 IST" duration-ms="596" status="PASS">
+        <test-method is-config="true" signature="excelSetup()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:19 IST" name="excelSetup" finished-at="2024-02-18T21:42:20 IST" duration-ms="475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- excelSetup -->
-        <test-method is-config="true" signature="firstSetup()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:07 IST" name="firstSetup" finished-at="2024-02-18T20:17:11 IST" duration-ms="3885" status="PASS">
+        <test-method is-config="true" signature="firstSetup()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:20 IST" name="firstSetup" finished-at="2024-02-18T21:42:31 IST" duration-ms="11187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstSetup -->
-        <test-method is-config="true" signature="secondAdminLogin()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:11 IST" name="secondAdminLogin" finished-at="2024-02-18T20:17:11 IST" depends-on-methods="com.learnertracker.test.TestBase.firstSetup" duration-ms="217" status="PASS">
+        <test-method is-config="true" signature="secondAdminLogin()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:31 IST" name="secondAdminLogin" finished-at="2024-02-18T21:42:31 IST" depends-on-methods="com.learnertracker.test.TestBase.firstSetup" duration-ms="163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- secondAdminLogin -->
-        <test-method is-config="true" signature="LearnerForm()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:11 IST" name="LearnerForm" finished-at="2024-02-18T20:17:12 IST" duration-ms="873" status="PASS">
+        <test-method is-config="true" signature="LearnerForm()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:31 IST" name="LearnerForm" finished-at="2024-02-18T21:42:32 IST" duration-ms="580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LearnerForm -->
-        <test-method signature="addLearnersWithValidData()[pri:1, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:12 IST" name="addLearnersWithValidData" finished-at="2024-02-18T20:17:14 IST" duration-ms="2167" status="PASS">
+        <test-method signature="addLearnersWithValidData()[pri:1, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:32 IST" name="addLearnersWithValidData" finished-at="2024-02-18T21:42:33 IST" duration-ms="1522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addLearnersWithValidData -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T20:17:14 IST" name="logout" finished-at="2024-02-18T20:17:15 IST" duration-ms="298" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.learnertracker.test.AdminAddLearnerClass@d35dea7]" started-at="2024-02-18T21:42:33 IST" name="logout" finished-at="2024-02-18T21:42:34 IST" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->

@@ -15,7 +15,7 @@ public class TrainerAddLearnerClass extends TestBase {
 
 	LoginPage loginPage = null;
 	TrainerManageLearner trainerManageLearner = null;
-	CustomLogger logger = new CustomLogger(AdminAddLearnerClass.class.getName());
+	CustomLogger logger = new CustomLogger(TrainerAddLearnerClass.class.getName());
 
 	@BeforeTest
 	public void loginTrainer() {
